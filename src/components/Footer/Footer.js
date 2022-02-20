@@ -21,7 +21,7 @@ const Footer = () => {
         </Row>
         <Row>
           <Col className="text-center py-3">
-            <a href="https://github.com/Maruthi158/FrontendQuotemaker">
+            <a href="https://github.com/Maruthi158/frontendquotemake">
               Frontend
             </a>
           </Col>
