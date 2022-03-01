@@ -6,12 +6,15 @@ import {
   Navbar,
   NavDropdown,
 } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
     <Navbar bg="primary" expand="lg" variant="dark">
       <Container>
-        <Navbar.Brand href="/">Quote Maker</Navbar.Brand>
+        <Navbar.Brand>
+          <Link to="/">Quote Maker</Link>
+        </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="m-auto">
@@ -24,7 +27,9 @@ const Header = () => {
             </Form>
           </Nav>
           <Nav>
-            <Nav.Link href="#home">My Quotes</Nav.Link>
+            <Nav.Link href="/myquotes">
+              <Link to="/myquotes">My Quotes</Link>
+            </Nav.Link>
 
             <NavDropdown title="Priyanka Maruthi" id="basic-nav-dropdown">
               <NavDropdown.Item href="#action/3.1">My Profile</NavDropdown.Item>
