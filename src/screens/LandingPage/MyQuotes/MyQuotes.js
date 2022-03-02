@@ -2,18 +2,25 @@ import MainScreen from "../../../components/MainScreen";
 import { Link } from "react-router-dom";
 import { Accordion, Badge, Button, Card } from "react-bootstrap";
 import { useEffect, useState } from "react";
-import quotes from "../../../data/quotes";
 import axios from "axios";
 
 const Myquotes = () => {
+  const [quotes, setQuotes] = useState([]);
   const deleteHandler = (id) => {
     if (window.confirm("Are you sure you want to delete the quote?")) {
     }
   };
 
   const fetchQuotes = async () => {
-    const { data } = await axios.get("/api/quotes");
+    const { data } = await axios.get("http://localhost:5000/api/quotes");
+    setQuotes(data);
   };
+
+  console.log(quotes);
+
+  useEffect(() => {
+    fetchQuotes();
+  });
   // console.log(quotes);
   // useEffect(() => {
   //   fetchQuotes();
