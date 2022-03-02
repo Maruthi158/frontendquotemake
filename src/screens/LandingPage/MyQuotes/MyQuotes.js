@@ -12,7 +12,7 @@ const Myquotes = () => {
   };
 
   const fetchQuotes = async () => {
-    const { data } = await axios.get("http://localhost:5000/api/quotes");
+    const { data } = await axios.get("https://quotemakerbackendprod.herokuapp.com/api/quotes");
     setQuotes(data);
   };
 
