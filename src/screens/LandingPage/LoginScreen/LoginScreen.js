@@ -24,7 +24,7 @@ function LoginScreen(_history) {
       };
       setLoading(true);
       const { data } = await axios.post(
-        "http://localhost:5000/api/users/login",
+        "https://quotemakerbackend.herokuapp.com/api/users/login",
         {
           email,
           password,
